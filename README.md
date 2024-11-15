@@ -1,12 +1,5 @@
 
-       
 
-
-   TTTTT  DDDD   K   K
-     T    D   D  K  K
-     T    D   D  KK
-     T    D   D  K  K
-     T    DDDD   K   K
 
 Hálózati és Weboldal Tesztelő
 
