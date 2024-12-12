@@ -1,78 +1,61 @@
+Network and Website Tester
 
+This Python application allows users to scan their network devices, check ports, and test the availability of websites. The program provides a graphical user interface (GUI) for easy network security testing and exporting the results.
 
+Features:
 
+    Network Device Scanning:
+    The application performs ARP scanning to find devices on the local network (IP and MAC addresses).
 
+    Port Scanning:
+    Checks the status of commonly used ports (e.g., 22, 80, 443) and possible vulnerabilities.
 
+    Website Testing:
+    Allows users to test HTTP/HTTPS websites and provides information on response code, IP address, and response time.
 
+    Export Results:
+    The program provides the option to export the results to a text file.
 
-Hálózati és Weboldal Tesztelő
+To run the program, you need to install the following Python libraries:
+    pip install pyqt5 scapy psutil requests
 
-Ez a Python alkalmazás lehetővé teszi a felhasználók számára, hogy szkenneljék a hálózati eszközeiket, ellenőrizzék a portokat és teszteljék a weboldalak elérhetőségét. A program grafikus felhasználói felületet (GUI) kínál a hálózati biztonság egyszerű tesztelésére és az eredmények exportálására.
-Funkciók
+Usage:
+Network Device Scanning:
 
-Hálózati eszközök szkennelése: Az alkalmazás ARP szkennelést végez, hogy megtalálja a helyi hálózaton elérhető eszközöket (IP és MAC címek).
-    Port szkennelés: Ellenőrzi az általánosan használt portok (pl. 22, 80, 443) állapotát és a lehetséges sebezhetőségeket.
-    Weboldal tesztelés: Lehetővé teszi a felhasználók számára, hogy HTTP/HTTPS weboldalakat teszteljenek, és információkat nyújtson a válasz kódról, IP címről és válaszidőről.
-    Eredmények exportálása: A program lehetőséget ad az eredmények exportálására szöveges fájlba.
+    Enter the IP range (e.g., 192.168.1.0/24) or select automatic detection for the local network.
+    Click the "Scan" button to find active devices.
 
+Port Scanning:
 
-A program futtatásához szükséges a következő Python könyvtárak telepítése:
+    After completing the network device scan, select an IP address from the list.
+    Click the "Port Scan" button to check the selected IP's ports and possible vulnerabilities.
 
-PyQt5 – A grafikus felhasználói felülethez
-    scapy – A hálózati szkenneléshez
-    psutil – A helyi hálózati interfész információkhoz
-    requests – Weboldal teszteléshez
-    ipaddress – IP címek kezeléséhez
+Website Testing:
 
-Telepítés:
+    Enter the website URL and click the "Website Test" button.
+    The application will display the response time, response code, and other details.
 
-pip install pyqt5 scapy psutil requests
+Export Results:
 
-Használat
+    Click the "Export Results" button and choose a file where you can save the test results.
 
-Hálózati eszközök szkennelése:
-        Adja meg az IP tartományt (pl. 192.168.1.0/24) vagy válassza az automatikus észlelést a helyi hálózathoz.
-        Kattintson a "Szkennelés" gombra, hogy megtalálja az aktív eszközöket.
+Main Libraries Used in the Code:
 
-Port szkennelés:
-        Miután elvégezte a hálózati eszközök szkennelését, válasszon egy IP címet a listából.
-        Kattintson a "Port szkennelés" gombra, hogy ellenőrizze a kiválasztott IP portjait és azok sebezhetőségeit.
+    PyQt5: For GUI development
+    scapy: For network scanning
+    psutil: For handling local network interface information
+    requests: For HTTP/HTTPS website availability checks
+    socket: For handling network connections
+    time: For timing purposes
+    ipaddress: For managing IP addresses
 
- Weboldal tesztelés:
-        Adja meg a weboldal URL-jét, majd kattintson a "Weboldal teszt" gombra.
-        Az alkalmazás megjeleníti a válasz időt, a válasz kódot és egyéb adatokat.
+Troubleshooting:
 
-Eredmények exportálása:
-        Kattintson az "Eredmények exportálása" gombra, és válasszon egy fájlt, ahová elmentheti a teszt eredményeit.
+    Network interface not found:
+    Check if you are properly connected to the network (Wi-Fi or Ethernet).
 
-  
-  Kódban használt főbb könyvtárak
+    Website not available:
+    If the website does not respond, try again later or check the URL.
 
-PyQt5 – GUI fejlesztéshez
-    scapy – Hálózati szkenneléshez
-    psutil – A helyi hálózati interfészek információinak kezeléséhez
-    requests – HTTP/HTTPS weboldal elérhetőség ellenőrzéséhez
-    socket – Hálózati kapcsolat kezelése
-    time – Időzítéshez
-    ipaddress – IP címek kezeléséhez
-
-Hibaelhárítás
-
-Nem található a hálózati interfész: Ellenőrizze, hogy megfelelően van-e csatlakozva a hálózathoz (Wi-Fi vagy Ethernet).
-    Weboldal nem elérhető: Ha a weboldal nem válaszol, próbálja meg újra később vagy ellenőrizze az URL-t.
-    Port szkennelés nem működik: Bizonyos portok tűzfal által lehetnek blokkolva.
-
-    
- 
-            _____
-           /     \
-          | () () |
-          |  __   |     ______
-          | |__|  |    /      \
-         _|______|_  |        |
-       /          \ |  _____|
-      /  ______    \| |      
-     /  /      \    | |    
-    |  |        |   | |     
-    |  |        |   | |
-    |__|________|___|_|
+    Port scanning not working:
+    Certain ports may be blocked by a firewall.
